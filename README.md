@@ -124,9 +124,6 @@ The web search tool is enabled so the agent can pull current event listings, sch
 ### Foundry Agent Playground
 ![Agent Playground](docs/screenshots/foundry-playground.png)
 
-### Agent YAML Definition
-![Agent YAML](docs/screenshots/agent-yaml.png)
-
 ### Flask Web App in Action
 ![Web App](docs/screenshots/webapp-chat.png)
 
