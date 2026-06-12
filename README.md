@@ -5,25 +5,25 @@ A conversational AI web app that helps fans navigate the **FIFA World Cup 2026**
 
 ![App Demo](docs/screenshots/app-demo.png)
 
-## 🌟 Why I Built This
+## Why I Built This
 
 The FIFA World Cup 2026 is being co-hosted across North America, with **Seattle hosting six matches at Lumen Field in June and July 2026**. With hundreds of thousands of visiting fans, I wanted to build a focused AI assistant that could answer questions about the tournament locally — match schedules, watch parties, FanFest events, and Seattle-specific info — without going off-topic.
 
 This project demonstrates how a tightly-scoped AI agent + a web search tool can outperform a general-purpose chatbot for niche, time-sensitive use cases.
 
-## 🎯 What It Does
+## Purpose
 
 Users chat with an AI concierge through a clean web interface. The agent:
 
-- 🏟️ Answers questions about World Cup matches in Seattle (schedule, teams, venue info)
-- 🍻 Recommends **watch parties, bars, and FanFest events** around the city
-- 🚇 Helps with **transit, parking, and getting to Lumen Field**
-- 📜 Discusses tournament history and notable players
-- 🌐 Uses an integrated **web search tool** for real-time info (event updates, news)
-- 💬 Maintains **multi-turn conversation history** so follow-ups retain context
-- 🚫 Politely declines off-topic questions thanks to a constrained system prompt
+-  Answers questions about World Cup matches in Seattle (schedule, teams, venue info)
+-  Recommends **watch parties, bars, and FanFest events** around the city
+-  Helps with **transit, parking, and getting to Lumen Field**
+-  Discusses tournament history and notable players
+-  Uses an integrated **web search tool** for real-time info (event updates, news)
+-  Maintains **multi-turn conversation history** so follow-ups retain context
+-  Politely declines off-topic questions thanks to a constrained system prompt
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌──────────────┐    HTTP    ┌──────────────┐   Responses API   ┌──────────────────────┐
@@ -38,7 +38,7 @@ Users chat with an AI concierge through a clean web interface. The agent:
                                                                  └──────────────────┘
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -51,17 +51,17 @@ Users chat with an AI concierge through a clean web interface. The agent:
 | **Frontend** | HTML / CSS / JS templates with `markdown` + `bleach` for safe rendering |
 | **Tooling** | VS Code, Foundry Toolkit extension, GitHub Copilot, Azure CLI |
 
-## ✨ Features
+## Features
 
-- 🤖 Domain-specialized agent with a custom system prompt
-- 🔍 Web search tool for real-time event info
-- 💬 Multi-turn conversation with bounded history (last 3 exchanges)
-- 🔐 **Keyless authentication** via Microsoft Entra ID — no API keys in code
-- 🧼 Safe markdown rendering with HTML sanitization (bleach)
-- ⚙️ Environment-based configuration via `.env` files
-- 🛡️ Input validation (message length limits) and safe external link handling
+-  Domain-specialized agent with a custom system prompt
+-  Web search tool for real-time event info
+-  Multi-turn conversation with bounded history (last 3 exchanges)
+-  **Keyless authentication** via Microsoft Entra ID — no API keys in code
+-  Safe markdown rendering with HTML sanitization (bleach)
+-  Environment-based configuration via `.env` files
+-  Input validation (message length limits) and safe external link handling
 
-## 🤖 Agent System Prompt
+##  Agent System Prompt
 
 ```
 You are an expert in the history of the FIFA World Cup and are focused on
@@ -74,7 +74,7 @@ on any topic that is unrelated to FIFA World Cup.
 
 The web search tool is enabled so the agent can pull current event listings, schedule changes, and news.
 
-## 🚀 Setup
+##  Setup
 
 ### Prerequisites
 
@@ -119,7 +119,7 @@ The web search tool is enabled so the agent can pull current event listings, sch
    ```
    Visit [http://localhost:5000](http://localhost:5000) and start chatting.
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Foundry Agent Playground
 ![Agent Playground](docs/screenshots/foundry-playground.png)
@@ -130,7 +130,7 @@ The web search tool is enabled so the agent can pull current event listings, sch
 ### Flask Web App in Action
 ![Web App](docs/screenshots/webapp-chat.png)
 
-## 🧠 What I Learned
+##  What I Learned
 
 - **Agentic AI design** — encapsulating a model, system prompt, and tools into a reusable, versioned agent rather than relying on stateless API calls
 - **Modern Azure auth** — using `DefaultAzureCredential` and bearer token providers instead of static API keys, the recommended pattern for production Azure workloads
@@ -139,7 +139,7 @@ The web search tool is enabled so the agent can pull current event listings, sch
 - **Secrets hygiene** — `.env`, `.env.example`, `.gitignore` discipline, and `DefaultAzureCredential` keyless auth
 - **Tool-augmented LLMs** — extending an agent's knowledge beyond its training cutoff with web search
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 .
@@ -154,11 +154,11 @@ The web search tool is enabled so the agent can pull current event listings, sch
     └── screenshots/        # README images
 ```
 
-## ⚠️ Project Status
+##  Project Status
 
 This project began as an exercise based on a Microsoft Learn tutorial on Azure AI Foundry, then I rebuilt it around a domain I actually cared about: helping fans navigate the World Cup in my city. Azure resources have been deprovisioned to avoid charges, but the code is fully functional with any valid Foundry agent endpoint.
 
-## 📄 License
+## License
 
 MIT
 
