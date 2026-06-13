@@ -161,4 +161,4 @@ MIT
 
 ---
 
-Built by **[YOUR NAME]** · [LinkedIn](https://linkedin.com/in/...) · [Portfolio](https://...)
+Built by **Microsoft Learn and Nick Sandberg** · [LinkedIn](https://linkedin.com/in/nick-hsd)
