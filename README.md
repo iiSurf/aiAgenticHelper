@@ -86,8 +86,8 @@ The web search tool is enabled so the agent can pull current event listings, sch
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/[YOUR-USERNAME]/[REPO-NAME].git
-   cd [REPO-NAME]
+   git clone https://github.com/iiSurf/aiAgenticHelper.git
+   cd aiAgenticHelper
    ```
 
 2. **Create and activate a virtual environment:**
